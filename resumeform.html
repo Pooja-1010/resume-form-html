@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Resume Submission Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f2f5f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px;
+      color: #2c3e50;
+    }
+
+    form {
+      background: #ffffff;
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section {
+      margin-bottom: 30px;
+    }
+
+    .form-section h3 {
+      border-left: 5px solid #3585e5;
+      padding-left: 10px;
+      color: #34495e;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form-group > div {
+      flex: 1 1 45%;
+      min-width: 200px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="url"],
+    input[type="file"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #f9f9f9;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .declaration {
+      margin-top: 20px;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    @media (max-width: 600px) {
+      .form-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>Resume Submission Form</h2>
+
+<form action="#" method="post" enctype="multipart/form-data">
+
+  <div class="form-section">
+    <h3>Personal Information</h3>
+    <div class="form-group">
+      <div>
+        <label>Field Name</label>
+        <input type="text" name="fieldName" required>
+      </div>
+      <div>
+        <label>Full Name</label>
+        <input type="text" name="fullName" required>
+      </div>
+      <div>
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+      </div>
+      <div>
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+      </div>
+      <div>
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+      </div>
+      <div>
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">--Select--</option>
+          <option>Female</option>
+          <option>Male</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label>Marital Status</label>
+        <select name="maritalStatus" required>
+          <option value="">--Select--</option>
+          <option>Single</option>
+          <option>Married</option>
+        </select>
+      </div>
+      <div>
+        <label>Nationality</label>
+        <input type="text" name="nationality" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3>Contact Details</h3>
+    <div class="form-group">
+      <div>
+        <label>Address</label>
+        <textarea name="address" rows="3" required></textarea>
+      </div>
+      <div>
+        <label>LinkedIn Profile</label>
+        <input type="url" name="linkedin">
+      </div>
+      <div>
+        <label>GitHub Profile</label>
+        <input type="url" name="github">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3>Documents</h3>
+    <div class="form-group">
+      <div>
+        <label>Upload Profile Photo</label>
+        <input type="file" name="photo" accept="image/*" required>
+      </div>
+      <div>
+        <label>Upload Resume (PDF only)</label>
+        <input type="file" name="resume" accept="application/pdf" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3>Education & Skills</h3>
+    <div class="form-group">
+      <div>
+        <label>Career Objective</label>
+        <textarea name="objective" rows="3" required></textarea>
+      </div>
+      <div>
+        <label>Highest Qualification</label>
+        <input type="text" name="qualification" required>
+      </div>
+      <div>
+        <label>College / University</label>
+        <input type="text" name="college" required>
+      </div>
+      <div>
+        <label>Year of Graduation</label>
+        <input type="number" name="graduationYear" min="1900" max="2099" required>
+      </div>
+      <div>
+        <label>Technical Skills</label>
+        <textarea name="technicalSkills" rows="2" required></textarea>
+      </div>
+      <div>
+        <label>Programming Languages Known</label>
+        <textarea name="programming" rows="2" required></textarea>
+      </div>
+      <div>
+        <label>Certifications (if any)</label>
+        <textarea name="certifications" rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3>Experience</h3>
+    <div class="form-group">
+      <div>
+        <label>Work Experience (Years)</label>
+        <input type="number" name="experience" min="0" step="0.1">
+      </div>
+      <div>
+        <label>Last Company Worked At</label>
+        <input type="text" name="lastCompany">
+      </div>
+      <div>
+        <label>Job Role / Designation</label>
+        <input type="text" name="jobRole">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3>More About You</h3>
+    <div class="form-group">
+      <div>
+        <label>Languages Known</label>
+        <textarea name="languagesKnown" rows="2"></textarea>
+      </div>
+      <div>
+        <label>Hobbies</label>
+        <textarea name="hobbies" rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="declaration">
+    <label>
+      <input type="checkbox" name="declaration" required>
+      I confirm that all the details provided are correct to the best of my knowledge.
+    </label>
+  </div>
+
+  <button type="submit">Submit Resume</button>
+</form>
+
+</body>
+</html>
